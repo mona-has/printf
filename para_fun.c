@@ -24,4 +24,3 @@ void init_para(para_s *para, va_list ptr)
 	para->h_modifier = 0;
 	para->l_modifier = 0;
 }
-
