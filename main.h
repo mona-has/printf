@@ -39,8 +39,8 @@ typedef struct paramet
 	unsigned int hashtag_f : 1;
 	unsigned int zero_f : 1;
 	unsigned int minus_f : 1;
-	unsigned int width_f : 1;
-	unsigned int precision_f : 1;
+	unsigned int width;
+	unsigned int precision;
 	unsigned int h_modifier : 1;
 	unsigned int l_modifier : 1;
 } para_s;
