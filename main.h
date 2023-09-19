@@ -14,8 +14,8 @@
 
 #define PARA_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
-#define CONV_L_C 1
-#define CONV_UNSIGNED 2
+#define CONVERT_LOWERCASE  1
+#define CONVERT_UNSIGNED   2
 
 /**
  * struct paramet - struct of parameter
