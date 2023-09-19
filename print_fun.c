@@ -91,7 +91,7 @@ int pr_string(va_list ptr, para_s *para)
 	if (para->minus_f)
 	{
 		if (para->precision != UINT_MAX)
-			for (a = 0, a < dab, a++)
+			for (a = 0; a < dab; a++)
 				m += _putchar(*s++);
 		else
 			m += _puts(s);
@@ -102,7 +102,7 @@ int pr_string(va_list ptr, para_s *para)
 	if (!para->minus_f)
 	{
 		if (para->precision != UINT_MAX)
-			for (a = 0, a < dab, a++)
+			for (a = 0; a < dab; a++)
 				m += _putchar(*s++);
 		else
 			m += _puts(s);

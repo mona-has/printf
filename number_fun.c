@@ -79,7 +79,7 @@ int pr_addres(va_list ptr, para_s *para)
 
 	d = va_arg(ptr, unsigned long int);
 
-	if (!n)
+	if (!d)
 		return (_puts("(nil)"));
 	s = conv(d, 16, CONV_UNSIGNED | CONV_L_C, para);
 	*--s = 'x';
