@@ -45,7 +45,7 @@ int pr_numbers(char *st, para_s *para)
 		st++;
 		c--;
 	}
-	if (para->precision != UNIT_MAX)
+	if (para->precision != UINT_MAX)
 		while (c++ < para->precision)
 			*--st = '0';
 	if (ne)
