@@ -74,7 +74,7 @@ int pr_unsign(va_list ptr, para_s *para);
 int pr_addres(va_list ptr, para_s *para);
 
 /* specfiers_fun file */
-int g_specifier(char x, va_list ptr, para_s *para);
+int g_specifier(char *x, va_list ptr, para_s *para);
 int g_printfun(char *x, va_list ptr, para_s *para);
 int g_flag(char *x, para_s *para);
 int g_modifier(char *x, para_s *para);
