@@ -10,7 +10,7 @@
 #define OUTBUT_B_S 1024
 #define BUF_FLUSH -1
 
-#define NULL_STRING "(NULL)"
+#define NULL_STRING "(null)"
 
 #define PARA_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
