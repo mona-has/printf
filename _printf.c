@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		b = g_precision(b, &para, ptr);
 		if (g_modifier(b, &para))
 			b++;
-		if (!g_specifier(b, ptr, &para))
+		if (!g_specifier(b)
 			num += pr_from_to(start, b,
 			para.l_modifier || para.h_modifier ? b - 1 : 0);
 		else
