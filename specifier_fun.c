@@ -4,8 +4,6 @@
 * g_specifier - entry point
 *
 * @x: string
-* @ptr: pointer
-* @para: parameters struct
 *
 * Return: number of bytes printed
 */
