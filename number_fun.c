@@ -76,6 +76,7 @@ int pr_addres(va_list ptr, para_s *para)
 {
 	unsigned long int d;
 	char *s;
+
 	d = va_arg(ptr, unsigned long int);
 
 	if (!n)
