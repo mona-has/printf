@@ -28,14 +28,16 @@ int _puts(char *st)
 
 int _putchar(int s)
 {
-	int y = 0;
-	char b[OUTBUT_B_S];
+	static int y;
+	static char b[OUTBUT_B_S];
 
-	if (s != BUF_FLUSH)
-		b[y++] = s;
 	if (s == BUF_FLUSH || y >= OUTBUT_B_S)
 	{
 		write(1, b, y);
+		y = 0;
 	}
+
+	if (s != BUF_FLUSH)
+		b[y++] = s;
 	return (1);
 }
