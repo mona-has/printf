@@ -10,40 +10,34 @@
 * Return: number of bytes printed
 */
 
-int g_specifier(char *x, va_list ptr, para_s *para)
+int *g_specifier(char *x)
 {
-	switch (*x)
-	{
-		case 'c':
-			return (pr_char(ptr, para));
-		case 'd':
-		case 'i':
-			return (pr_int(ptr, para));
-		case 's':
-			return (pr_string(ptr, para));
-		case '%':
-			return (pr_percent(ptr, para));
-		case 'b':
-			return (pr_binary(ptr, para));
-		case 'o':
-			return (pr_octal(ptr, para));
-		case 'u':
-			return (pr_unsign(ptr, para));
-		case 'x':
-			return (pr_x(ptr, para));
-		case 'X':
-			return (pr_X(ptr, para));
-		case 'p':
-			return (pr_addres(ptr, para));
-		case 'S':
-			return (pr_S(ptr, para));
-		case 'r':
-			return (pr_rev(ptr, para));
-		case 'R':
-			return (pr_rot13(ptr, para));
-		default:
-			return (-1);
+	specif_s specifiers[] = {
+	{"c", pr_char},
+	{"d", pr_int},
+	{"i", pr_int},
+	{"s", pr_string},
+	{"%", pr_percent},
+	{"b", pr_binary},
+	{"o", pr_octal},
+	{"u", pr_unsign},
+	{"x", pr_x},
+	{"X", pr_X},
+	{"p", pr_addres},
+	{"S", pr_S},
+	{"r", pr_rev},
+	{"R", pr_rot13},
+	{NULL, NULL}
+	};
+	int a = 0;
+
+	while (specifiers[a].specifiers) {
+	if (*x == specifiers[a].specifiers[0]) {
+		return (specifiers[a].f);
 	}
+	a++;
+	}
+	return (NULL);
 }
 
 
@@ -58,6 +52,7 @@ int g_specifier(char *x, va_list ptr, para_s *para)
 */
 int g_printfun(char *x, va_list ptr, para_s *para)
 {
+
 	int (*f)(va_list, para_s *) = g_specifier(x);
 
 	if (f)
