@@ -77,4 +77,3 @@ int pr_rot13(va_list ptr, para_s *para)
 	}
 	return (co);
 }
-
