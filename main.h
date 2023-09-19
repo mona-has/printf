@@ -54,7 +54,7 @@ typedef struct paramet
 typedef struct specifiers
 {
 	char *specifiers;
-	int (*f)(va_list, para_s);
+	int (*f)(va_list, para_s *);
 } specif_s;
 
 /* put_fun file */
