@@ -10,7 +10,7 @@
 * Return: number of bytes printed
 */
 
-int *g_specifier(char *x)
+int (*g_specifier(char *x))(va_list ptr, para_s *para)
 {
 	specif_s specifiers[] = {
 	{"c", pr_char},
@@ -31,11 +31,13 @@ int *g_specifier(char *x)
 	};
 	int a = 0;
 
-	while (specifiers[a].specifiers) {
-	if (*x == specifiers[a].specifiers[0]) {
-		return (specifiers[a].f);
-	}
-	a++;
+	while (specifiers[a].specifiers)
+	{
+		if (*x == specifiers[a].specifiers[0])
+		{
+			return (specifiers[a].f);
+		}
+		a++;
 	}
 	return (NULL);
 }
