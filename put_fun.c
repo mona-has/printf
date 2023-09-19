@@ -8,7 +8,7 @@
 * Return: always 0
 */
 
-int _puts(char *strin)
+int _puts(char *string)
 {
 	char *x = st;
 
