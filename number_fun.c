@@ -20,13 +20,13 @@ char *conv(long int n, int b, int f, para_s *para)
 	unsigned long y = n;
 	(void)para;
 
-	if (!(f & CONV_UNSIGNED) && n < 0)
+	if (!(f & CONVERT_UNSIGNED) && n < 0)
 	{
 		y = -n;
 		s = '-';
 	}
 
-	a = f & CONV_L_C ? "0123456789abcdef" : "0123456789ABCDEF";
+	a = f & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	p = &buf[49];
 	*p = '\0';
 
@@ -60,7 +60,7 @@ int pr_unsign(va_list ptr, para_s *para)
 	else
 		z = (unsigned int)va_arg(ptr, unsigned int);
 	para->unsign = 1;
-	return (pr_numbers(conv(z, 10, CONV_UNSIGNED, para), para));
+	return (pr_numbers(conv(z, 10, CONVERT_UNSIGNED, para), para));
 }
 
 /**
@@ -81,7 +81,7 @@ int pr_addres(va_list ptr, para_s *para)
 
 	if (!d)
 		return (_puts("(nil)"));
-	s = conv(d, 16, CONV_UNSIGNED | CONV_L_C, para);
+	s = conv(d, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, para);
 	*--s = 'x';
 	*--s = '0';
 	return (pr_numbers(s, para));
