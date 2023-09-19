@@ -29,7 +29,7 @@ int (*g_specifier(char *x))(va_list ptr, para_s *para)
 	};
 	int a = 0;
 
-	while (specifiers[x].specifiers)
+	while (specifiers[a].specifiers)
 	{
 		if (*x == specifiers[a].specifiers[0])
 		{
