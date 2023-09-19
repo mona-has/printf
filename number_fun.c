@@ -13,8 +13,8 @@
 
 char *conv(long int n, int b, int f, para_s *para)
 {
-	char *a;
-	char buf[50];
+	static char *a;
+	static char buf[50];
 	char s = 0;
 	char *p;
 	unsigned long y = n;
