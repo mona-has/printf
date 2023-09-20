@@ -75,7 +75,7 @@ int pr_num_right_sh(char *st, para_s *para)
 		st++;
 	else
 		ne = 0;
-	if ((!para->plus_f && !ne2) ||
+	if ((para->plus_f && !ne2) ||
 		(!para->plus_f && para->space_f && !ne2))
 		c++;
 	if (ne && p_char == '0')
@@ -89,7 +89,7 @@ int pr_num_right_sh(char *st, para_s *para)
 		x += _putchar(p_char);
 	if (ne && p_char == ' ')
 		x += _putchar('-');
-	if (para->plus_f && !ne2 && p_char == '0' &&
+	if (para->plus_f && !ne2 && p_char == ' ' &&
 		!para->unsign)
 		x += _putchar('+');
 	else if (!para->plus_f && para->space_f && !ne2
