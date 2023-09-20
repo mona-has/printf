@@ -5,7 +5,7 @@
 *
 * @st: stdin string
 *
-* Return: always 0
+* Return: always 0 (success)
 */
 
 int _puts(char *st)
