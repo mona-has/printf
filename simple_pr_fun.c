@@ -59,7 +59,7 @@ int pr_rot13(va_list ptr, para_s *para)
 	char ar[] =
 	"NOPQRSTUVWXYZABCDEFGHIJKLM  nopqrstuvwxyzabcdefghijklm";
 	char *x = va_arg(ptr, char *);
-	(void) para;
+	(void)para;
 
 	s = 0;
 	in = 0;
