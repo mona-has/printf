@@ -77,9 +77,10 @@ int pr_string(va_list ptr, para_s *para)
 {
 	char *s = va_arg(ptr, char *);
 	char dab_char = ' ';
-	unsigned int dab = 0, m = 0, a, k;
+	unsigned int dab = 0, m = 0, a = 0, k;
 
 	(void)para;
+
 	switch ((int)(!s))
 		case 1:
 			s = NULL_STRING;
